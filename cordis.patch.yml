@@ -1,0 +1,6 @@
+# dsh-tool-watchdog —— 作为 profile bundle 层装载时插入的插件行。
+# 生效条件：本包出现在 profile package.json 的 dsh.profile.bundles 列表里
+# （或由运行时注入器直接 create）。
+- insert:
+    - id: tool-watchdog
+      name: '@dsh-external/dsh-tool-watchdog'

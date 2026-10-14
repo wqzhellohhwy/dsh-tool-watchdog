@@ -1,0 +1,25 @@
+{
+  "name": "@dsh-external/dsh-tool-watchdog",
+  "version": "0.0.1",
+  "description": "工具执行看门狗：给工具调用加真超时，卡住的工具不再冻结整个会话，也不必再强杀 dsh",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "files": [
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "BSD-3-Clause",
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": ">=0.0.1-rc <2",
+    "cordis": ">=4.0.0-rc <5"
+  }
+}
